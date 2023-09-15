@@ -1,7 +1,11 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 const CodeExample = () => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(0)
+  const sayHello = () => {
+    console.log('hello there')
+  }
+  sayHello()
 
   return (
     <div>
@@ -10,6 +14,6 @@ const CodeExample = () => {
         click me
       </button>
     </div>
-  );
-};
-export default CodeExample;
+  )
+}
+export default CodeExample
