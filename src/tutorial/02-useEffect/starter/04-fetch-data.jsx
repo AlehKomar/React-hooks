@@ -16,24 +16,16 @@ const FetchData = () => {
     }
     fetchData()
   }, [])
-  console.log(users)
+
   return (
-    <>
-      <h2>fetch data example</h2>
-      <ul>
+    <section>
+      <h3>GitHub users</h3>
+      <ul className='users'>
         {users.map((user) => {
           const { id, login, avatar_url, html_url } = user
           return (
-            <li key={id} style={{ marginBottom: '1rem' }}>
-              <img
-                src={avatar_url}
-                style={{
-                  maxWidth: '200px',
-                  maxHeight: '200px',
-                  borderRadius: '50%'
-                }}
-                alt={login}
-              />
+            <li key={id}>
+              <img src={avatar_url} alt={login} />
               <div>
                 <h5>{login}</h5>
                 <a href={html_url}>Profile</a>
@@ -42,7 +34,7 @@ const FetchData = () => {
           )
         })}
       </ul>
-    </>
+    </section>
   )
 }
 export default FetchData
