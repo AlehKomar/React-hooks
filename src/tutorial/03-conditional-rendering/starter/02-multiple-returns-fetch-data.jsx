@@ -31,8 +31,6 @@ const MultipleReturnsFetchData = () => {
       </>
     )
   }
-  if (!isLoading && !isError) {
-  }
   return (
     <div>
       <img
