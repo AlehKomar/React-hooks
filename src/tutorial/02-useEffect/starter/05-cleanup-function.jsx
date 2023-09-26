@@ -16,7 +16,13 @@ export default CleanupFunction
 
 const Component = () => {
   useEffect(() => {
-    console.log('this is interesting')
+    console.log('it is interesting')
+    const intId = setInterval(() => {
+      console.log('hello from interval')
+    }, 1000)
+    return () => {
+      clearInterval(intId)
+    }
   }, [])
   return <div>Second Component</div>
 }
